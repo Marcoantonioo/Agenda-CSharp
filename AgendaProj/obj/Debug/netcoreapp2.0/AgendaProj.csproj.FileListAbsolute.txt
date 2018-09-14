@@ -1,0 +1,4 @@
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.0\AgendaProj.csprojAssemblyReference.cache
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.0\AgendaProj.csproj.CoreCompileInputs.cache
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.0\AgendaProj.AssemblyInfoInputs.cache
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.0\AgendaProj.AssemblyInfo.cs
