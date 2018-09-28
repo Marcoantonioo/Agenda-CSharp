@@ -6,7 +6,7 @@ namespace AgendaProj.Models
     {
         public Agenda(){}
         public Agenda(int id, string name, string email, int fone, string descricao, int numChamada,
-        DateTime data, TimeSpan horaInicio, TimeSpan horaFim
+        DateTime data, TimeSpan horaInicio, TimeSpan horaFim, Client client, Situacao sit
         ){
             this.id = id;
             this.name = name;
@@ -17,6 +17,8 @@ namespace AgendaProj.Models
             this.data = data;
             this.horaInicio = horaInicio;
             this.horaFim = horaFim;
+            this.client = client;
+            this.sit = sit;
             
             
         }
@@ -30,8 +32,7 @@ namespace AgendaProj.Models
         public TimeSpan horaInicio{get;set;}
         public TimeSpan horaFim{get;set;}
         public TimeSpan duracao{get;set;}
-       
-       
-       
+        public Client client {get;set;}
+        public Situacao sit {get;set;}
     }   
 }

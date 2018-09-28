@@ -9,7 +9,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="Agenda/Create" class="btn btn-primary">Novo Chamado</a></a>
+				<a class="navbar-brand" href="Create" class="btn btn-primary">Novo Chamado</a></a>
 			</div>
 			
 			<div id="navbar" class="navbar-collapse collapse">
@@ -20,9 +20,23 @@
 							Ações <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu" role="menu">
-                            <li>
-								<a href="/agenda">Listar  Chamados</a>
+							<li>
+								<a href="#">Novo Chamado</a>
+								<a href="/Client/Create">Novo Cliente</a>
 							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Listagem <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="/Agenda">Listar Chamados</a>
+								<a href="/Client">Listar Clientes</a>
+							</li>
+						</ul>
+					</li>
                            
 						</ul>
 					</li>
@@ -34,45 +48,43 @@
 <form  action="Create" method="Post">
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label >Nome do Solicitante</label>
-      <input type="text" class="form-control" name="name" placeholder="Nome">
+      <label for="client.id">Cliente</label>
+                <select class="form-control" name="client.id">
+                    @foreach(var client in @ViewBag.cliente)
+                    {
+                        <option value=@client.id>@client.nome</option>
+                    }
+                </select>
+
+                <label for="sit.id">Situação</label>
+                <select class="form-control" name="sit.id">
+                    @foreach(var sit in @ViewBag.situacao)
+                    {
+                        <option value=@sit.id>@sit.sit</option>
+                    }
+                </select>
     </div>
-    <div class="form-group col-md-6">
-      <label>Email</label>
-      <input type="email" class="form-control" name="email"  placeholder="Email">
-    </div>
-  </div>
-  <div class="form-group col-md-12">
-    <label >Telefone</label>
-    <input type="text" class="form-control" name="fone"  placeholder="Telefone">
-  </div>
-  <div class="form-group col-md-12 ">
-    <label >Descrição do Problema</label>
-    <textarea type="text" class="form-control" name="descricao" placeholder="Descricao do Problema "></textarea>
+
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label>Numero da Chamada</label>
-      <input type="text" class="form-control" name="numChamada" placeholder="Numero Chamada">
-    </div>
-    <div class="form-group col-md-6">
       <label>Data</label>
-      <input type="date" class="form-control" name="data" placeholder="Data">
+      <input type="date" class="form-control" name="data" >
     </div>
      <div class="form-group col-md-6">
-      <label>Hora Inicio da Chamada</label>
-      <input type="time" class="form-control" name="horaInicio" placeholder="Hora de inicio da chamada">
+      <label for="horaInicio">Hora Inicio da Chamada</label>
+      <input type="time" class="form-control" name="horaInicio">
     </div>
-    <div class="form-group col-md-6">
-      <label>Hora Final da Chamada</label>
-      <input type="time" class="form-control" name="horaFim" placeholder="Hora de Término da chamada">
-    </div>
+    <div class="form-group col-md-6 ">
+    <label >Descrição do Problema</label>
+    <textarea type="text" rows="4" class="form-control" name="descricao" ></textarea>
+    <input  class="btn btn-primary" 
+                type="submit" value="Salvar"/>
+  </div>
     
   </div>
-  <div class="container">
-  <input  class="btn btn-primary" 
-                type="submit" value="Salvar"/>
-    </div>
+  <div>
+  
 </form>
 
 

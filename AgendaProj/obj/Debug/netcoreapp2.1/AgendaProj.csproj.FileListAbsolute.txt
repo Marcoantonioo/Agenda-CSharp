@@ -33,3 +33,8 @@ C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\AgendaProj.View
 C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\AgendaProj.dll
 C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\AgendaProj.pdb
 C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\AgendaProj.csproj.CopyComplete
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\Razor\Views\Client\Index.g.cshtml.cs
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\Razor\Views\Client\Create.g.cshtml.cs
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\Razor\Views\Situacao\Create.g.cshtml.cs
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\Razor\Views\Situacao\Index.g.cshtml.cs
+C:\Projeto- agenda\ProjAgenda\AgendaProj\obj\Debug\netcoreapp2.1\Razor\Views\Client\Update.g.cshtml.cs

@@ -1,0 +1,92 @@
+@model AgendaProj.Models.Client
+<br>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/Agenda/Create" class="btn btn-primary">Novo Chamado</a></a>
+			</div>
+			
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Ações <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="/Agenda/Create">Novo Chamado</a>
+								<a href="/Client/Create">Novo Cliente</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Listagem <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="/Agenda">Listar Chamados</a>
+								<a href="/Client">Listar Clientes</a>
+							</li>
+						</ul>
+					</li>
+                           
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+<div class="container">
+
+    <h3>Editar Cliente</h3>
+
+    <br>
+
+    <form action="Update" method="Post">
+
+        <div class="col-md-5">
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="id">Id</label>
+                <input class="form-control" type="text" name="id" value="@Model.id" readonly>
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="nome">Nome</label>
+                <input class="form-control" type="text" name="nome" value="@Model.nome">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="telefone">Telefone</label>
+                <input class="form-control" type="text" name="fone" value="@Model.fone">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="email">E-mail</label>
+                <input class="form-control" type="text" name="email" value="@Model.email">
+            </div>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Salvar Alterações"/>
+
+        </div>
+
+    </form>
+
+</div>

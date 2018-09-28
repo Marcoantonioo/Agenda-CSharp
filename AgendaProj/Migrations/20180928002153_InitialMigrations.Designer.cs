@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AgendaProj.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180914010134_InitialMigrations")]
+    [Migration("20180928002153_InitialMigrations")]
     partial class InitialMigrations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,6 +23,8 @@ namespace AgendaProj.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<int?>("clientid");
 
                     b.Property<DateTime>("data");
 
@@ -42,9 +44,54 @@ namespace AgendaProj.Migrations
 
                     b.Property<int>("numChamada");
 
+                    b.Property<int?>("sitid");
+
                     b.HasKey("id");
 
+                    b.HasIndex("clientid");
+
+                    b.HasIndex("sitid");
+
                     b.ToTable("Agenda");
+                });
+
+            modelBuilder.Entity("AgendaProj.Models.Client", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("email");
+
+                    b.Property<int>("fone");
+
+                    b.Property<string>("nome");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Client");
+                });
+
+            modelBuilder.Entity("AgendaProj.Models.Situacao", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("sit");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Situacao");
+                });
+
+            modelBuilder.Entity("AgendaProj.Models.Agenda", b =>
+                {
+                    b.HasOne("AgendaProj.Models.Client", "client")
+                        .WithMany()
+                        .HasForeignKey("clientid");
+
+                    b.HasOne("AgendaProj.Models.Situacao", "sit")
+                        .WithMany()
+                        .HasForeignKey("sitid");
                 });
 #pragma warning restore 612, 618
         }

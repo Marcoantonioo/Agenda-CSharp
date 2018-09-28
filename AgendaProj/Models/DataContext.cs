@@ -9,5 +9,8 @@ namespace AgendaProj.Models
             : base(options)
         {}
         public DbSet<Agenda> Agenda { get; set; }
+        public DbSet<Client> Client{get; set;}
+        public DbSet<Situacao> Situacao{get; set;}
+        
     }
 }

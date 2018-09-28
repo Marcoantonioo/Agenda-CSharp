@@ -1,0 +1,80 @@
+@model IEnumerable<AgendaProj.Models.Situacao>
+<br>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/Agenda/Create" class="btn btn-primary">Novo Chamado</a></a>
+			</div>
+			
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Ações <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="/Agenda/Create">Novo Chamado</a>
+								<a href="/Client/Create">Novo Cliente</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							Listagem <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li>
+								<a href="/Agenda">Listar Chamados</a>
+								<a href="/Client">Listar Clientes</a>
+							</li>
+						</ul>
+					</li>
+                           
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <div class="container">
+<a href="Situacao/Create" class="btn btn-primary">Nova Situacao</a>
+</div>
+</br>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>        
+                <th>Situação</th>
+                <th>Descrição</th>
+            </tr>
+           
+        </thead>
+
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>#@item.id</td>
+                <td>@item.sit</td>
+                
+                
+				<td>
+					<a href="agenda/Delete/@item.id" class="btn btn-danger col-md-6">
+					<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Excluir
+					</a>
+					</td>
+            </tr>
+             
+        }
+    </table>
+    
+</div>
